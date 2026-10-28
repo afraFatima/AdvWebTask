@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descrition" content="Buy & Sell second-hand items on campus.">
+    <title>CampusMart - Buy & Sell on campus!</title>
+</head>
+<body>
+    <header>
+        <nav aria-label = "Main">
+        <a href="index.html"><strong>CampusMart</strong></a>
+        <ul>
+            <li><a href="index.html">Browse</a></li>
+            <li><a href="sell.html">Sell an Item</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section>
+                <h1>Buy &amp; sell on campus</h1>
+                <p>Textbooks, calculators, furniture and more — from students, for students.</p>
+        </section>
+
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="title">Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    minlength="5"
+                    maxlength="100"
+                    pattern=".*[^0-9].*"
+                    title="Enter a title containing at least one non-digit character."
+                    placeholder="e.g. Calculus textbook"
+                    autocomplete="off"
+                    required>
+            </div>
+        <br>
+            <div>
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Choose a category</option>
+                    <option value="books">Books</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="stationery">Stationery</option>
+                </select>
+            </div>
+            <br>
+            <fieldset>
+                <legend>Condition</legend>
+
+                <input type="radio" id="condition-new"
+                    name="condition" value="new" required>
+                <label for="condition-new">New</label>
+
+                <input type="radio" id="condition-good"
+                    name="condition" value="good">
+                <label for="condition-good">Good</label>
+
+                <input type="radio" id="condition-fair"
+                    name="condition" value="fair">
+                <label for="condition-fair">Fair</label>
+            </fieldset>
+            <br>
+            <div>
+                <label for="price">Price in Rs</label>
+                <input
+                    type="number"
+                    id="price"
+                    name="price"
+                    min="50"
+                    step="1"
+                    placeholder="Minimum Rs 50"
+                    required>
+            </div>
+            <br>
+
+            <div>
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    minlength="20"
+                    rows="4"
+                    placeholder="Describe your item, its features and any wear or damage."
+                    ></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="photo">Photo (optional)</label>
+                <input
+                    type="file"
+                    id="photo"
+                    name="photo"
+                    accept="image/*">
+            </div>
+            <br>
+
+            <div>
+                <input
+                    type="checkbox"
+                    id="ownership"
+                    name="ownership"
+                    required>
+                <label for="ownership">
+                    I confirm this item is mine to sell
+                </label>
+            </div>
+
+            <button type="submit">Publish listing</button>
+        </form>
+
+        <section aria-labelledby="fees-heading">
+            <h2 id="fees-heading">Selling fees</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Listing type</th>
+                        <th scope="col">Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Standard listing</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Featured listing</td>
+                        <td>Rs 500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="safety-heading">
+            <h2 id="safety-heading">Selling safely</h2>
+            <details>
+                <summary>Safety tips for meeting buyers</summary>
+                <ul>
+                    <li>Meet in a busy, well-lit public place on campus.</li>
+                    <li>Tell a friend when and where you are meeting.</li>
+                    <li>Check your payment before handing over the item.</li>
+                    <li>Never share passwords, PINs or verification codes.</li>
+                </ul>
+            </details>
+        </section>
+        <br>
+            <section aria-labelledby="latest-heading">
+                <h2 id="latest-heading">Latest listings</h2>
+
+                <article>
+                    <img src="https://placehold.co/400x300?text=Calculator" alt="Casio fx-991EX calculator" width="400" height="300" />
+                    <h3>Casio fx-991EX Calculator</h3>
+                    <p><strong>Rs 4,500</strong> · Electronics · Good condition</p>
+                    <p>Works perfectly, comes with its cover.</p>
+                    <a href="#">View details</a>
+                </article>
+
+                <article>
+                    <img src="https://placehold.co/400x300?text=CLRS" alt="Introduction to Algorithms textbook" width="400" height="300" />
+                    <h3>Introduction to Algorithms (CLRS)</h3>
+                    <p><strong>Rs 3,500</strong> · Books · Like new</p>
+                    <p>3rd edition with minimal highlighting.</p>
+                    <a href="#">View details</a>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 CampusMart · <a href="mailto:help@campusmart.pk">help@campusmart.pk</a></p>
+        </footer>
+    </header>
+    </body>
+</html>
